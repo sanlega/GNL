@@ -6,7 +6,7 @@
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 17:52:01 by slegaris          #+#    #+#             */
-/*   Updated: 2023/04/25 20:29:37 by slegaris         ###   ########.fr       */
+/*   Updated: 2023/04/27 04:37:05 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ char	*ft_strjoin(char *left_str, char *buff)
 		left_str[0] = '\0';
 	}
 	if (!left_str || !buff)
-		return (NULL);
+		return (free(left_str), NULL);
 	str = malloc(sizeof(char) * ((ft_strlen(left_str) + ft_strlen(buff)) + 1));
 	if (str == NULL)
 		return (NULL);
@@ -73,15 +73,14 @@ char	*ft_strjoin(char *left_str, char *buff)
 
 char	*ft_get_line(char *left_str)
 {
-	int		i;
+	size_t	i;
+	size_t	len;
 	char	*str;
 
-	i = 0;
-	if (!left_str[i])
+	if (!left_str || !left_str[0])
 		return (NULL);
-	while (left_str[i] && left_str[i] != '\n')
-		i++;
-	str = (char *)malloc(sizeof(char) * (i + 2));
+	len = ft_line_length(left_str);
+	str = (char *)malloc(sizeof(char) * (len + 1 + (left_str[len] == '\n')));
 	if (!str)
 		return (NULL);
 	i = 0;
