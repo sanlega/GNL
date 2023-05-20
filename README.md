@@ -40,6 +40,14 @@ When `get_next_line` is called:
 
 The returned line includes the newline character, if one was found.
 
+## Testing with Main.c 🧪💻
+
+Included in this project is a `main.c` file, which is used to test the performance of the `get_next_line` function. It measures the number of CPU cycles used and the total execution time, often referred to as "wall time". It can be used to test with any text file you have.
+
+### Usage ⌨️
+
+Run the program with a single argument which is the path to the text file you want to read:
+
 Note: In C, you have to manually free any memory that you allocated when you're done with it. In this code, the responsibility of freeing the returned line falls on whoever calls `get_next_line`.
 
 Enjoy! 😄
