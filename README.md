@@ -1,4 +1,4 @@
-# Get Next Line (GNL) 📖✨ [![slegaris's 42 get_next_line Score](https://badge42.vercel.app/api/v2/cle3f3fm900060fjx7kw7tghw/project/3055065)](https://github.com/JaeSeoKim/badge42)
+# Get Next Line (GNL) 📖✨ [![slegaris's 42 get_next_line Score](https://badge42.vercel.app/api/v2/cle3f3fm900060fjx7kw7tghw/project/3055065)](https://profile.intra.42.fr/users/slegaris)
 
 This is a C function that reads any valid file and returns each line, until the end of the file or an error occurs.
 
