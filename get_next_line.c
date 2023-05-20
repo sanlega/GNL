@@ -6,7 +6,7 @@
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 17:51:16 by slegaris          #+#    #+#             */
-/*   Updated: 2023/05/02 15:21:18 by slegaris         ###   ########.fr       */
+/*   Updated: 2023/05/20 00:21:01 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,7 @@ char	*ft_read_to_left_str(int fd, char *left_str)
 		buff[rd_bytes] = '\0';
 		left_str = ft_strjoin(left_str, buff);
 	}
-	free(buff);
-	return (left_str);
+	return (free(buff), left_str);
 }
 
 char	*get_next_line(int fd)
@@ -93,6 +92,9 @@ char	*get_next_line(int fd)
 //     start_c = clock();
 //     gettimeofday(&start_w, NULL);
 //
+// 	line = get_next_line(fd);
+// 	line = get_next_line(fd);
+// 	close(fd);
 //     while ((line = get_next_line(fd)) != NULL)
 //     {
 //         printf("%s", line);
@@ -113,5 +115,6 @@ char	*get_next_line(int fd)
 //     printf("Wall time used: %.3fms\n", wall_time_used);
 //
 //     close(fd);
+// 	system("leaks a.out");
 //     return (0);
 // }

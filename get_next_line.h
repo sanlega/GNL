@@ -6,7 +6,7 @@
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 17:51:39 by slegaris          #+#    #+#             */
-/*   Updated: 2023/04/27 04:32:19 by slegaris         ###   ########.fr       */
+/*   Updated: 2023/05/11 19:58:49 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 # define GET_NEXT_LINE_H
 
 # include <stdlib.h>
-# include <stdlib.h>
 # include <unistd.h>
 # include <stddef.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1
+#  define BUFFER_SIZE 60
 # endif
 
 char	*get_next_line(int fd);
